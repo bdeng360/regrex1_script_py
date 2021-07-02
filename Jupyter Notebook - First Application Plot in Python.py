@@ -34,73 +34,30 @@ regrex = pd.read_csv("regrex1.csv")
 # In[6]:
 
 
-print(regrex)
+x = regrex.x
 
 
 # In[7]:
 
 
-x = regrex.x
+y = regrex.y
 
 
 # In[8]:
 
 
-y = regrex.y
+plt.plot(x, y, 'o')
 
 
 # In[9]:
 
 
-plt.plot(x, y, 'o')
+reg = stats.linregress(x, y)
 
 
 # In[10]:
 
 
-reg = stats.linregress(x, y)
-
-
-# In[11]:
-
-
-plt.plot(x, reg.intercept + reg.slope*x, 'b', label='lin fit')
-
-
-# In[12]:
-
-
 plt.plot(x, y, 'o', label='scatter')
 plt.plot(x, reg.intercept + reg.slope*x, 'b', label='lin fit')
 plt.legend()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
